@@ -29,8 +29,16 @@ Supported Algorithms:
         {
             case "generate":
                 try { Generate(args); }
-                catch (FileNotFoundException ex) { Console.Error.WriteLine($"Error: {ex.Message}"); }
-                catch (UnauthorizedAccessException ex) { Console.Error.WriteLine($"Error: {ex.Message}"); }
+                catch (FileNotFoundException ex)
+                {
+                    Console.Error.WriteLine($"Error: {ex.Message}");
+                    Environment.Exit(1);
+                }
+                catch (UnauthorizedAccessException ex)
+                {
+                    Console.Error.WriteLine($"Error: {ex.Message}");
+                    Environment.Exit(1);
+                }
                 break;
             case "verify":
                 Verify(args);
@@ -41,31 +49,69 @@ Supported Algorithms:
                 Environment.Exit(1);
                 break;
         }
-
     }
 
     static void Generate(string[] args)
     {
-        if (args.Length > 1)
-        {
-            var filePath = args[1];
-            var hashes = Hasher.ComputeAllPath(filePath);
-            foreach (var hash in hashes)
-            {
-                Console.WriteLine($"{hash.Key}: {hash.Value}  {filePath}");
-            }
-        }
-        else
+        if (args.Length < 2)
         {
             Console.Error.WriteLine(usage);
             Environment.Exit(1);
         }
 
+        var filePath = args[1];
+        var hashes = Hasher.ComputeAllPath(filePath);
+        foreach (var hash in hashes)
+        {
+            Console.WriteLine($"{hash.Key}: {hash.Value}  {filePath}");
+        }
     }
 
     static void Verify(string[] args)
     {
+        if (args.Length < 3)
+        {
+            Console.Error.WriteLine(usage);
+            Environment.Exit(1);
+        }
 
+        var filePath = args[1];
+        var inputHash = args[2];
+
+
+        HashVerififcation v;
+        try
+        {
+            v = Hasher.VerifyHashPath(filePath, inputHash);
+        }
+        catch (InvalidHashKindException)
+        {
+            Console.Error.WriteLine($"Error: unable to infer hash type of {inputHash}");
+            Environment.Exit(1);
+            return;
+        }
+        catch (FileNotFoundException ex)
+        {
+            Console.Error.WriteLine($"Error: {ex.Message}");
+            Environment.Exit(1);
+            return;
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            Console.Error.WriteLine($"Error: {ex.Message}");
+            Environment.Exit(1);
+            return;
+        }
+
+        if (v.Verified)
+        {
+            Console.WriteLine($"Verified {v.Kind.ToString()}: {v.ActualHash}  {filePath}");
+        }
+        else
+        {
+            Console.WriteLine($"{v.Kind.ToString()}: {v.ActualHash}  {filePath}");
+            Console.WriteLine($"input hash: {inputHash} is not the same as {v.ActualHash}");
+        }
     }
 }
 

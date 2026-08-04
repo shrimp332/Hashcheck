@@ -65,10 +65,54 @@ namespace HashCheck.Core
             }
         }
 
-        public static bool CompareString(string str1, string str2)
+        public static HashVerififcation VerifyHashStream(Stream stream, string hash)
         {
-            // stub
-            return false;
+            var kind = InferKind(Hasher.NormaliseHash(hash));
+            if (kind == null)
+            {
+                throw new InvalidHashKindException();
+            }
+            var actual = ComputeStream(stream, kind.Value);
+            return new HashVerififcation(kind.Value, hash, actual, CompareHash(hash, actual));
+        }
+
+        public static HashVerififcation VerifyHashPath(string path, string hash)
+        {
+            using (var stream = File.OpenRead(path))
+            {
+                return VerifyHashStream(stream, hash);
+            }
+        }
+
+        public static bool CompareHash(string inputHash, string hash)
+        {
+            return NormaliseHash(inputHash) == NormaliseHash(hash);
+        }
+
+        /// <summary>
+        /// lowercase
+        /// </summary>
+        public static string NormaliseHash(string hash)
+        {
+            hash = hash.ToLowerInvariant();
+            return hash;
+        }
+
+        public static HashKind? InferKind(string nomralisedHash)
+        {
+            switch (nomralisedHash.Length)
+            {
+                case 32:
+                    return HashKind.MD5;
+                case 40:
+                    return HashKind.SHA1;
+                case 64:
+                    return HashKind.SHA256;
+                case 128:
+                    return HashKind.SHA512;
+                default:
+                    return null;
+            }
         }
     }
 }
