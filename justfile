@@ -6,5 +6,5 @@ build:
     dotnet build
 
 # Runs HashCheck.Cli
-run:
-    dotnet run --project HashCheck.Cli
+run *args:
+    dotnet run --project HashCheck.Cli -- {{args}}
