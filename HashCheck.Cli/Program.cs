@@ -17,7 +17,7 @@ Supported Algorithms:
     SHA256
     SHA512";
 
-    static void Main(string[] args)
+    static int Main(string[] args)
     {
         if (args.Length < 1)
         {
@@ -28,35 +28,27 @@ Supported Algorithms:
         switch (args[0].ToLower())
         {
             case "generate":
-                try { Generate(args); }
-                catch (FileNotFoundException ex)
+                try { return Generate(args); }
+                catch (Exception ex)
                 {
                     Console.Error.WriteLine($"Error: {ex.Message}");
-                    Environment.Exit(1);
+                    return 1;
                 }
-                catch (UnauthorizedAccessException ex)
-                {
-                    Console.Error.WriteLine($"Error: {ex.Message}");
-                    Environment.Exit(1);
-                }
-                break;
             case "verify":
-                Verify(args);
-                break;
+                return Verify(args);
             default:
                 Console.Error.WriteLine($"Unknown command verb: {args[0]}");
                 Console.Error.WriteLine(usage);
-                Environment.Exit(1);
-                break;
+                return 1;
         }
     }
 
-    static void Generate(string[] args)
+    static int Generate(string[] args)
     {
         if (args.Length < 2)
         {
             Console.Error.WriteLine(usage);
-            Environment.Exit(1);
+            return 1;
         }
 
         var filePath = args[1];
@@ -65,14 +57,15 @@ Supported Algorithms:
         {
             Console.WriteLine($"{hash.Key}: {hash.Value}  {filePath}");
         }
+        return 0;
     }
 
-    static void Verify(string[] args)
+    static int Verify(string[] args)
     {
         if (args.Length < 3)
         {
             Console.Error.WriteLine(usage);
-            Environment.Exit(1);
+            return 1;
         }
 
         var filePath = args[1];
@@ -87,20 +80,12 @@ Supported Algorithms:
         catch (InvalidHashKindException)
         {
             Console.Error.WriteLine($"Error: unable to infer hash type of {inputHash}");
-            Environment.Exit(1);
-            return;
+            return 1;
         }
-        catch (FileNotFoundException ex)
+        catch (Exception ex)
         {
             Console.Error.WriteLine($"Error: {ex.Message}");
-            Environment.Exit(1);
-            return;
-        }
-        catch (UnauthorizedAccessException ex)
-        {
-            Console.Error.WriteLine($"Error: {ex.Message}");
-            Environment.Exit(1);
-            return;
+            return 1;
         }
 
         if (v.Verified)
@@ -112,6 +97,7 @@ Supported Algorithms:
             Console.WriteLine($"{v.Kind.ToString()}: {v.ActualHash}  {filePath}");
             Console.WriteLine($"input hash: {inputHash} is not the same as {v.ActualHash}");
         }
+        return 0;
     }
 }
 
