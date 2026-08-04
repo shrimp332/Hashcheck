@@ -52,7 +52,6 @@ namespace HashCheck.Core
                 dict.Add(kind, hash);
             }
             return dict;
-
         }
 
         /// <summary>
