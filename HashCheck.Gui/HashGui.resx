@@ -147,10 +147,10 @@
     <value>0</value>
   </data>
   <data name="fileInputPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>12, 8</value>
   </data>
   <data name="fileInputPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>384, 187</value>
+    <value>384, 191</value>
   </data>
   <data name="fileInputPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -165,7 +165,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;fileInputPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="openFileButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>321, 205</value>
@@ -189,7 +189,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;openFileButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <metadata name="HashAlgo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -228,6 +228,118 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;hashOutputGridView.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="verifyHashInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>402, 26</value>
+  </data>
+  <data name="verifyHashInput.PlaceholderText" xml:space="preserve">
+    <value>Insert Hash Here</value>
+  </data>
+  <data name="verifyHashInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>386, 23</value>
+  </data>
+  <data name="verifyHashInput.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;verifyHashInput.Name" xml:space="preserve">
+    <value>verifyHashInput</value>
+  </data>
+  <data name="&gt;&gt;verifyHashInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;verifyHashInput.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;verifyHashInput.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="verifyHashBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="verifyHashBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>713, 55</value>
+  </data>
+  <data name="verifyHashBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="verifyHashBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="verifyHashBtn.Text" xml:space="preserve">
+    <value>Verify</value>
+  </data>
+  <data name="&gt;&gt;verifyHashBtn.Name" xml:space="preserve">
+    <value>verifyHashBtn</value>
+  </data>
+  <data name="&gt;&gt;verifyHashBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;verifyHashBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;verifyHashBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="verifyLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="verifyLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="verifyLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="verifyLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>402, 8</value>
+  </data>
+  <data name="verifyLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 15</value>
+  </data>
+  <data name="verifyLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="verifyLabel.Text" xml:space="preserve">
+    <value>Verify</value>
+  </data>
+  <data name="&gt;&gt;verifyLabel.Name" xml:space="preserve">
+    <value>verifyLabel</value>
+  </data>
+  <data name="&gt;&gt;verifyLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;verifyLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;verifyLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="resultOutputLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="resultOutputLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>402, 82</value>
+  </data>
+  <data name="resultOutputLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 15</value>
+  </data>
+  <data name="resultOutputLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="resultOutputLabel.Text" xml:space="preserve">
+    <value>Result: </value>
+  </data>
+  <data name="&gt;&gt;resultOutputLabel.Name" xml:space="preserve">
+    <value>resultOutputLabel</value>
+  </data>
+  <data name="&gt;&gt;resultOutputLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;resultOutputLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;resultOutputLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

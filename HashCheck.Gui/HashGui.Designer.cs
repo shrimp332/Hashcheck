@@ -35,6 +35,10 @@
             hashOutputGridView = new DataGridView();
             HashAlgo = new DataGridViewTextBoxColumn();
             Hash = new DataGridViewTextBoxColumn();
+            verifyHashInput = new TextBox();
+            verifyHashBtn = new Button();
+            verifyLabel = new Label();
+            resultOutputLabel = new Label();
             fileInputPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)hashOutputGridView).BeginInit();
             SuspendLayout();
@@ -84,10 +88,36 @@
             Hash.Name = "Hash";
             Hash.ReadOnly = true;
             // 
+            // verifyHashInput
+            // 
+            resources.ApplyResources(verifyHashInput, "verifyHashInput");
+            verifyHashInput.Name = "verifyHashInput";
+            // 
+            // verifyHashBtn
+            // 
+            resources.ApplyResources(verifyHashBtn, "verifyHashBtn");
+            verifyHashBtn.Name = "verifyHashBtn";
+            verifyHashBtn.UseVisualStyleBackColor = true;
+            verifyHashBtn.Click += verifyHashBtn_Click;
+            // 
+            // verifyLabel
+            // 
+            resources.ApplyResources(verifyLabel, "verifyLabel");
+            verifyLabel.Name = "verifyLabel";
+            // 
+            // resultOutputLabel
+            // 
+            resources.ApplyResources(resultOutputLabel, "resultOutputLabel");
+            resultOutputLabel.Name = "resultOutputLabel";
+            // 
             // HashGui
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(resultOutputLabel);
+            Controls.Add(verifyLabel);
+            Controls.Add(verifyHashBtn);
+            Controls.Add(verifyHashInput);
             Controls.Add(hashOutputGridView);
             Controls.Add(openFileButton);
             Controls.Add(fileInputPanel);
@@ -97,6 +127,7 @@
             fileInputPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)hashOutputGridView).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -107,5 +138,9 @@
         private DataGridView hashOutputGridView;
         private DataGridViewTextBoxColumn HashAlgo;
         private DataGridViewTextBoxColumn Hash;
+        private TextBox verifyHashInput;
+        private Button verifyHashBtn;
+        private Label verifyLabel;
+        private Label resultOutputLabel;
     }
 }

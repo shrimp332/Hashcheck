@@ -89,9 +89,32 @@ namespace HashCheck.Gui
             hashOutputGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
 
-        private void fileInputPanel_Paint(object sender, PaintEventArgs e)
+        private void verifyHashBtn_Click(object sender, EventArgs e)
         {
+            HashVerififcation v;
+            try
+            {
+                v = Hasher.VerifyHashPath(_filePath, verifyHashInput.Text);
+            }
+            catch (InvalidHashKindException)
+            {
+                resultOutputLabel.Text = "Error: Unable to infer hash type";
+                return;
+            }
+            catch (Exception ex)
+            {
+                resultOutputLabel.Text = $"Error: {ex.Message}";
+                return;
+            }
 
+            if (v.Verified)
+            {
+                resultOutputLabel.Text = $"Result: Hash verified with {v.Kind} algorithm";
+            }
+            else
+            {
+                resultOutputLabel.Text = $"Result: Hash did not match";
+            }
         }
     }
 }
