@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "HashCheck.Cli": {
+      "commandName": "Project"
+    },
+    "generate command": {
+      "commandName": "Project",
+      "commandLineArgs": "generate HashCheck.sln",
+      "workingDirectory": "C:\\Users\\luke1\\Documents\\hashcheck"
+    },
+    "verify md5": {
+      "commandName": "Project",
+      "commandLineArgs": "verify HashCheck.sln a7c8d2425e481154b9b58565836f778c",
+      "workingDirectory": "C:\\Users\\luke1\\Documents\\hashcheck"
+    }
+  }
+}
