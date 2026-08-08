@@ -116,5 +116,16 @@ namespace HashCheck.Gui
                 resultOutputLabel.Text = $"Result: Hash did not match";
             }
         }
+
+        private void hashOutputGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex != hashOutputGridView.Columns["Hash"]!.Index) return;
+            var hash = hashOutputGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value?.ToString();
+            if (string.IsNullOrEmpty(hash)) return;
+
+            commandOutput.Text = $"Copied {hash} to clipboard";
+            Clipboard.SetText(hash);
+
+        }
     }
 }

@@ -39,6 +39,7 @@
             verifyHashBtn = new Button();
             verifyLabel = new Label();
             resultOutputLabel = new Label();
+            commandOutput = new Label();
             fileInputPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)hashOutputGridView).BeginInit();
             SuspendLayout();
@@ -75,6 +76,7 @@
             hashOutputGridView.Name = "hashOutputGridView";
             hashOutputGridView.ReadOnly = true;
             hashOutputGridView.RowHeadersVisible = false;
+            hashOutputGridView.CellDoubleClick += hashOutputGridView_CellDoubleClick;
             // 
             // HashAlgo
             // 
@@ -110,10 +112,16 @@
             resources.ApplyResources(resultOutputLabel, "resultOutputLabel");
             resultOutputLabel.Name = "resultOutputLabel";
             // 
+            // commandOutput
+            // 
+            resources.ApplyResources(commandOutput, "commandOutput");
+            commandOutput.Name = "commandOutput";
+            // 
             // HashGui
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(commandOutput);
             Controls.Add(resultOutputLabel);
             Controls.Add(verifyLabel);
             Controls.Add(verifyHashBtn);
@@ -142,5 +150,6 @@
         private Button verifyHashBtn;
         private Label verifyLabel;
         private Label resultOutputLabel;
+        private Label commandOutput;
     }
 }

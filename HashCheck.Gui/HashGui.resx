@@ -165,7 +165,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;fileInputPanel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="openFileButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>321, 205</value>
@@ -189,7 +189,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;openFileButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <metadata name="HashAlgo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -213,7 +213,7 @@
     <value>12, 234</value>
   </data>
   <data name="hashOutputGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 204</value>
+    <value>776, 184</value>
   </data>
   <data name="hashOutputGridView.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -228,7 +228,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;hashOutputGridView.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="verifyHashInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>402, 26</value>
@@ -252,7 +252,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;verifyHashInput.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="verifyHashBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -280,7 +280,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;verifyHashBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="verifyLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -313,7 +313,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;verifyLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="resultOutputLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -340,6 +340,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;resultOutputLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="commandOutput.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="commandOutput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="commandOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 426</value>
+  </data>
+  <data name="commandOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 15</value>
+  </data>
+  <data name="commandOutput.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;commandOutput.Name" xml:space="preserve">
+    <value>commandOutput</value>
+  </data>
+  <data name="&gt;&gt;commandOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;commandOutput.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;commandOutput.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
