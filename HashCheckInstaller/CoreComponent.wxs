@@ -1,0 +1,12 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+		<ComponentGroup Id="CoreComponents" Directory="INSTALLFOLDER">
+			<Component>
+				<File Source="$(var.HashCheck.Core.TargetPath)" />
+			</Component>
+			<Component>
+				<File Source="$(var.HashCheck.Core.TargetDir)$(var.HashCheck.Core.TargetName).deps.json" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>

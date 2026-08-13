@@ -1,0 +1,18 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+		<ComponentGroup Id="CliComponents" Directory="INSTALLFOLDER">
+			<Component>
+				<File Source="$(var.HashCheck.Cli.TargetPath)" />
+			</Component>
+			<Component>
+				<File Source="$(var.HashCheck.Cli.TargetDir)$(var.HashCheck.Cli.TargetName).exe" />
+			</Component>
+			<Component>
+				<File Source="$(var.HashCheck.Cli.TargetDir)$(var.HashCheck.Cli.TargetName).runtimeconfig.json" />
+			</Component>
+			<Component>
+				<File Source="$(var.HashCheck.Cli.TargetDir)$(var.HashCheck.Cli.TargetName).deps.json" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>

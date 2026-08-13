@@ -1,0 +1,10 @@
+﻿<Project Sdk="WixToolset.Sdk/7.0.0">
+  <ItemGroup>
+    <ProjectReference Include="..\HashCheck.Cli\HashCheck.Cli.csproj" />
+    <ProjectReference Include="..\HashCheck.Core\HashCheck.Core.csproj" />
+    <ProjectReference Include="..\HashCheck.Gui\HashCheck.Gui.csproj" />
+  </ItemGroup>
+  <PropertyGroup>
+    	<AcceptEula>wix7</AcceptEula>
+  </PropertyGroup>
+</Project>

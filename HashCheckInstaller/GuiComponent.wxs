@@ -1,0 +1,18 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+		<ComponentGroup Id="GuiComponents" Directory="INSTALLFOLDER">
+			<Component>
+				<File Source="$(var.HashCheck.Gui.TargetPath)" />
+			</Component>
+			<Component>
+				<File Source="$(var.HashCheck.Gui.TargetDir)$(var.HashCheck.Gui.TargetName).exe" />
+			</Component>
+			<Component>
+				<File Source="$(var.HashCheck.Gui.TargetDir)$(var.HashCheck.Gui.TargetName).runtimeconfig.json" />
+			</Component>
+			<Component>
+				<File Source="$(var.HashCheck.Gui.TargetDir)$(var.HashCheck.Gui.TargetName).deps.json" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
