@@ -5,7 +5,7 @@
 				<File Source="$(var.HashCheck.Gui.TargetPath)" />
 			</Component>
 			<Component>
-				<File Source="$(var.HashCheck.Gui.TargetDir)$(var.HashCheck.Gui.TargetName).exe" />
+				<File Source="$(var.HashCheck.Gui.TargetDir)$(var.HashCheck.Gui.TargetName).exe" Name="Hashcheck.exe"/>
 			</Component>
 			<Component>
 				<File Source="$(var.HashCheck.Gui.TargetDir)$(var.HashCheck.Gui.TargetName).runtimeconfig.json" />

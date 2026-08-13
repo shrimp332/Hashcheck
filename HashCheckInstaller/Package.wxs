@@ -1,11 +1,12 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-	<Package Id="TODO_Manufacturer.HashCheckInstaller" Name="HashCheckInstaller" Manufacturer="TODO Manufacturer" Version="1.0.0">
+	<Package Id="LukeMcDonald.HashCheckInstaller" Name="HashCheck" Manufacturer="LukeMcDonald" Version="1.0.0">
 		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
 
 		<Feature Id="Main">
 			<ComponentGroupRef Id="GuiComponents" />
 			<ComponentGroupRef Id="CliComponents" />
 			<ComponentGroupRef Id="CoreComponents" />
+			<ComponentRef Id="ApplicationShortcut" />
 		</Feature>
 	</Package>
 </Wix>
