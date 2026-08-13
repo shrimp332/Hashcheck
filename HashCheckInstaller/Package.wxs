@@ -1,11 +1,13 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-	<Package Id="LukeMcDonald.HashCheckInstaller" Name="HashCheck" Manufacturer="LukeMcDonald" Version="1.0.0">
+	<Package Id="LukeMcDonald.HashCheckInstaller" Name="HashCheck" Manufacturer="LukeMcDonald" Version="$(var.HashCheckVersion)">
 		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+		<MediaTemplate EmbedCab="yes" />
 
 		<Feature Id="Main">
 			<ComponentGroupRef Id="GuiComponents" />
 			<ComponentGroupRef Id="CliComponents" />
 			<ComponentGroupRef Id="CoreComponents" />
+			<ComponentGroupRef Id="LicenseComponents" />
 			<ComponentRef Id="ApplicationShortcut" />
 		</Feature>
 	</Package>

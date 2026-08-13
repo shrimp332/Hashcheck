@@ -1,10 +1,13 @@
 ﻿<Project Sdk="WixToolset.Sdk/7.0.0">
-  <ItemGroup>
-    <ProjectReference Include="..\HashCheck.Cli\HashCheck.Cli.csproj" />
-    <ProjectReference Include="..\HashCheck.Core\HashCheck.Core.csproj" />
-    <ProjectReference Include="..\HashCheck.Gui\HashCheck.Gui.csproj" />
-  </ItemGroup>
-  <PropertyGroup>
-    	<AcceptEula>wix7</AcceptEula>
-  </PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\HashCheck.Cli\HashCheck.Cli.csproj" />
+		<ProjectReference Include="..\HashCheck.Core\HashCheck.Core.csproj" />
+		<ProjectReference Include="..\HashCheck.Gui\HashCheck.Gui.csproj" />
+	</ItemGroup>
+	<PropertyGroup>
+		<AcceptEula>wix7</AcceptEula>
+		<HashCheckVersion>0.1.0</HashCheckVersion>
+		<TargetName>hashcheck-$(HashCheckVersion)-win-x64</TargetName>
+		<DefineConstants>HashCheckVersion=$(HashCheckVersion)</DefineConstants>
+	</PropertyGroup>
 </Project>
