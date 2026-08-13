@@ -5,7 +5,14 @@
 				<File Source="$(var.HashCheck.Cli.TargetPath)" />
 			</Component>
 			<Component>
-				<File Source="$(var.HashCheck.Cli.TargetDir)$(var.HashCheck.Cli.TargetName).exe" />
+				<File Source="$(var.HashCheck.Cli.TargetDir)$(var.HashCheck.Cli.TargetName).exe" Name="hashcheck-cli.exe" />
+				<Environment Id="AddToPath"
+							 Name="PATH"
+							 Value="[INSTALLFOLDER]"
+							 Permanent="no"
+							 Part="last"
+							 Action="set"
+							 System="yes" />
 			</Component>
 			<Component>
 				<File Source="$(var.HashCheck.Cli.TargetDir)$(var.HashCheck.Cli.TargetName).runtimeconfig.json" />
