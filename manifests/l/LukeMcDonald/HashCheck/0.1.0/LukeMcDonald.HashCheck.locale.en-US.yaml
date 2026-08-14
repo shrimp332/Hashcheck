@@ -1,0 +1,19 @@
+# Created using wingetcreate 1.12.13.0
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.12.0.schema.json
+
+PackageIdentifier: LukeMcDonald.HashCheck
+PackageVersion: 0.1.0
+PackageLocale: en-US
+Publisher: LukeMcDonald
+PublisherUrl: https://github.com/shrimp332
+Author: Luke McDonald
+PackageName: HashCheck
+PackageUrl: https://github.com/shrimp332/Hashcheck
+License: 0BSD
+LicenseUrl: https://github.com/shrimp332/Hashcheck/blob/main/LICENSE
+Copyright: Copyright (c) 2026 Luke McDonald
+ShortDescription: Hashcheck GUI and CLI for SWE40006
+Description: Hashcheck GUI and CLI for SWE40006
+Moniker: hashcheck
+ManifestType: defaultLocale
+ManifestVersion: 1.12.0
